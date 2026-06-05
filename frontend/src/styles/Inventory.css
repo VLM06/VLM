@@ -1,0 +1,62 @@
+/* Inventory Styles */
+.inventory {
+  padding: 2rem;
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.inventory-header h1 {
+  color: var(--dark);
+}
+
+.add-item-form {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.add-item-form input {
+  padding: 0.75rem;
+}
+
+.add-item-form button {
+  grid-column: 1 / -1;
+}
+
+.inventory-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.inventory-table table {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .inventory {
+    padding: 1rem;
+  }
+  
+  .add-item-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .inventory-table {
+    overflow-x: auto;
+  }
+}

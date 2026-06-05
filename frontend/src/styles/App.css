@@ -1,0 +1,227 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+:root {
+  --primary: #667eea;
+  --secondary: #764ba2;
+  --success: #48bb78;
+  --danger: #f56565;
+  --warning: #ed8936;
+  --info: #4299e1;
+  --light: #f7fafc;
+  --dark: #2d3748;
+  --border: #e2e8f0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-logout {
+  background: var(--danger);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.btn-logout:hover {
+  background: #e53e3e;
+}
+
+.link-button {
+  background: none;
+  color: var(--primary);
+  text-decoration: underline;
+  padding: 0;
+  margin: 0 0.5rem;
+}
+
+.link-button:hover {
+  color: var(--secondary);
+}
+
+/* Forms */
+input, textarea, select {
+  font-family: inherit;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input:disabled, textarea:disabled, select:disabled {
+  background: #f7fafc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+}
+
+td, th {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:hover {
+  background: #f7fafc;
+}
+
+/* Alerts & Notifications */
+.error-banner {
+  background: var(--danger);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.success-banner {
+  background: var(--success);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.warning {
+  background: var(--warning);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--dark);
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  
+  button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  td, th {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,83 @@
+/* Sales Styles */
+.sales {
+  padding: 2rem;
+}
+
+.sales h1 {
+  margin-bottom: 2rem;
+  color: var(--dark);
+}
+
+.sales-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.summary-card h3 {
+  color: #718096;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.sales-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status.pending {
+  background: #fef5e7;
+  color: var(--warning);
+}
+
+.status.completed {
+  background: #e6ffed;
+  color: var(--success);
+}
+
+.status.shipped {
+  background: #edf2f7;
+  color: var(--info);
+}
+
+.status.delivered {
+  background: #e6ffed;
+  color: var(--success);
+}
+
+.status.cancelled {
+  background: #ffe6e6;
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .sales {
+    padding: 1rem;
+  }
+}
